@@ -15,7 +15,16 @@ var calculateClick = function() {
 
     }
 
-    $('future_value').value = futureValue.toFixed(0);
+
+    if(investmentAmount <= 0){
+        alert("You're investment amount has to be more than 0");
+    } else if(taxRate <= 0){
+        alert("You're Interest Rate has to be more than 0")
+    } else if(numOfYears <= 0){
+        alert("The Years have to be more than 0");
+    } else {
+        $('future_value').value = futureValue.toFixed(0);
+    };
 
 };
 
