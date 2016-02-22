@@ -1,19 +1,4 @@
-    //**********************************************************
-    // Code your JavaScript for the assignment
-    //
-    // The following comments show the suggested order of
-    // your code. You will need to write the code under each
-    // comment to perform the operations described by the
-    // comment.
-    //
-    // You can alter the suggested order. You are free to
-    // write the code in whatever order you want, so long
-    // as you accomplish the goals of the assignment.
-    //**********************************************************
-
-
-
-    //**********************************************************
+ //**********************************************************
     // Step 1: define a function that will be used to
     //         work with the values that are entered,
     //         validate the values, calculate the results,
@@ -23,8 +8,43 @@
     //       or you may split the code into as many functions
     //       as you want.
     //**********************************************************
+ var $ = function(id) {
+        return document.getElementById(id);
+ };
 
 
+ var calculate = function() {
+     // clearing out previous errors
+     if($('miles_driven_error').value !== '')
+     {
+         $('miles_driven_error').firstChild.nodeValue = '';
+     }
+     if($('gallons_used_error').value !== '')
+     {
+         $('gallons_used_error').firstChild.nodeValue = '';
+     }
+     
+
+     var miles = parseInt($('miles_driven').value);
+     var gallons = parseInt($('gallons_used').value);
+     var pricePerGallon = parseFloat($('price_gallon').value);
+
+     //validating form
+    if(miles <= 0 || isNaN(miles) || miles == ""){
+        $('miles_driven_error').firstChild.nodeValue =
+            "Please enter a valid number greater than 0 for Miles ";
+    };
+
+     if(gallons <= 0 || isNaN(gallons) || gallons ==""){
+
+        $('gallons_used_error').firstChild.nodeValue =
+            "Please enter a valid number greater than 0 for Gallons";
+    }
+ };
+
+ window.onload = function() {
+     $('btnCalc').onclick = calculate;
+ };
 
     //**********************************************************
     // Step 2: retrieve the values from the input type=text
