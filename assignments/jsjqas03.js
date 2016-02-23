@@ -51,8 +51,7 @@
          $("price_gallon_error").firstChild.nodeValue =
              "Please enter a valid number greater than 0 for Price per Gallon";
      }
-
-     //todo: finish validation for pricepergallon
+     
 
      //if error found, then nothing, if all good calculate and output restults to user
      if(errorFound == "y"){
