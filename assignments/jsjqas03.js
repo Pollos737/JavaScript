@@ -23,6 +23,10 @@
      {
          $('gallons_used_error').firstChild.nodeValue = '';
      }
+     if($('price_gallon_error').value !== '')
+     {
+         $('price_gallon_error').firstChild.nodeValue = '';
+     }
      
      //TODO: don't parse userInputs before validation.
      var miles = $('miles_driven').value;
@@ -50,6 +54,7 @@
      if(pricePerGallon <= 0 || isNaN(pricePerGallon) || pricePerGallon == "" ){
          $("price_gallon_error").firstChild.nodeValue =
              "Please enter a valid number greater than 0 for Price per Gallon";
+         errorFound = "y";
      }
      
 
@@ -65,11 +70,18 @@
 
 
 
+ };
+
+ var clearForm = function() {
+     $('miles_driven').value = "";
+     $('gallons_used').value = "";
+     $('price_gallon').value = "";
 
  };
 
  window.onload = function() {
      $('btnCalc').onclick = calculate;
+     $('btnClear').onclick = clearForm;
  };
 
     //**********************************************************
