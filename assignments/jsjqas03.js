@@ -24,22 +24,49 @@
          $('gallons_used_error').firstChild.nodeValue = '';
      }
      
+     //TODO: don't parse userInputs before validation.
+     var miles = $('miles_driven').value;
+     var gallons = $('gallons_used').value;
+     var pricePerGallon = $('price_gallon').value;
+     var mpg = parseFloat(miles * gallons).toFixed(2);
+     var costOfTrip = parseFloat(gallons * pricePerGallon).toFixed(2);
 
-     var miles = parseInt($('miles_driven').value);
-     var gallons = parseInt($('gallons_used').value);
-     var pricePerGallon = parseFloat($('price_gallon').value);
+     var errorFound = "n";
 
      //validating form
-    if(miles <= 0 || isNaN(miles) || miles == ""){
+     if(isNaN(miles) || miles <= 0  || miles == ""){
         $('miles_driven_error').firstChild.nodeValue =
             "Please enter a valid number greater than 0 for Miles ";
-    };
+        errorFound = "y";
+     }
 
      if(gallons <= 0 || isNaN(gallons) || gallons ==""){
 
         $('gallons_used_error').firstChild.nodeValue =
             "Please enter a valid number greater than 0 for Gallons";
-    }
+         errorFound = 'y';
+     }
+
+     if(pricePerGallon <= 0 || isNaN(pricePerGallon) || pricePerGallon == "" ){
+         $("price_gallon_error").firstChild.nodeValue =
+             "Please enter a valid number greater than 0 for Price per Gallon";
+     }
+
+     //todo: finish validation for pricepergallon
+
+     //if error found, then nothing, if all good calculate and output restults to user
+     if(errorFound == "y"){
+         //output "fix your stuff" to user
+         $('mpg').firstChild.nodeValue = "Please fix the above errors and re-calculate"
+     } else{
+         //output results
+         $('mpg').firstChild.nodeValue = mpg;
+         $('cost').firstChild.nodeValue = costOfTrip;
+     }
+
+
+
+
  };
 
  window.onload = function() {
