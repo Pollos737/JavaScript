@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Wilmer Guerra
 
 =======
@@ -14,6 +15,10 @@
     //       as you want.
     //**********************************************************
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+//Wilmer Guerra
+
+>>>>>>> clear-button
 =======
 //Wilmer Guerra
 
@@ -40,6 +45,7 @@
      
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      //important: validate value before using parseFloat.
      var miles = $('miles_driven').value;
      var gallons = $('gallons_used').value;
@@ -52,6 +58,13 @@
      var pricePerGallon = $('price_gallon').value;
      var mpg = parseFloat(miles * gallons).toFixed(2);
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //important: validate value before using parseFloat.
+     var miles = $('miles_driven').value;
+     var gallons = $('gallons_used').value;
+     var pricePerGallon = $('price_gallon').value;
+     var mpg = parseFloat(miles / gallons).toFixed(2);
+>>>>>>> clear-button
 =======
      //important: validate value before using parseFloat.
      var miles = $('miles_driven').value;
@@ -86,10 +99,14 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      //if error found, then nothing, if all good calculate and output results to user
 =======
      //if error found, then nothing, if all good calculate and output restults to user
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //if error found, then nothing, if all good calculate and output results to user
+>>>>>>> clear-button
 =======
      //if error found, then nothing, if all good calculate and output results to user
 >>>>>>> clear-button
@@ -109,9 +126,13 @@
  var clearForm = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
      //setting input fields to empty string
 =======
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //setting input fields to empty string
+>>>>>>> clear-button
 =======
      //setting input fields to empty string
 >>>>>>> clear-button
@@ -121,6 +142,9 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> clear-button
 =======
 >>>>>>> clear-button
      //if statements below check for error messages and clears them
@@ -146,8 +170,11 @@
      }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+>>>>>>> clear-button
 =======
 >>>>>>> clear-button
  };
@@ -157,6 +184,7 @@
      $('btnClear').onclick = clearForm;
  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -231,6 +259,9 @@
     //         functions for the Calculate and Clear buttons
     //**********************************************************
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+
+>>>>>>> clear-button
 =======
 
 >>>>>>> clear-button
