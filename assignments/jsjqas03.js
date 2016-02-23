@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Wilmer Guerra
 
 =======
@@ -13,6 +14,10 @@
     //       as you want.
     //**********************************************************
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+//Wilmer Guerra
+
+>>>>>>> clear-button
  var $ = function(id) {
         return document.getElementById(id);
  };
@@ -34,6 +39,7 @@
      }
      
 <<<<<<< HEAD
+<<<<<<< HEAD
      //important: validate value before using parseFloat.
      var miles = $('miles_driven').value;
      var gallons = $('gallons_used').value;
@@ -46,6 +52,13 @@
      var pricePerGallon = $('price_gallon').value;
      var mpg = parseFloat(miles * gallons).toFixed(2);
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //important: validate value before using parseFloat.
+     var miles = $('miles_driven').value;
+     var gallons = $('gallons_used').value;
+     var pricePerGallon = $('price_gallon').value;
+     var mpg = parseFloat(miles / gallons).toFixed(2);
+>>>>>>> clear-button
      var costOfTrip = parseFloat(gallons * pricePerGallon).toFixed(2);
 
      var errorFound = "n";
@@ -72,10 +85,14 @@
      
 
 <<<<<<< HEAD
+<<<<<<< HEAD
      //if error found, then nothing, if all good calculate and output results to user
 =======
      //if error found, then nothing, if all good calculate and output restults to user
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //if error found, then nothing, if all good calculate and output results to user
+>>>>>>> clear-button
      if(errorFound == "y"){
          //output "fix your stuff" to user
          $('mpg').firstChild.nodeValue = "Please fix the above errors and re-calculate"
@@ -91,14 +108,21 @@
 
  var clearForm = function() {
 <<<<<<< HEAD
+<<<<<<< HEAD
      //setting input fields to empty string
 =======
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+     //setting input fields to empty string
+>>>>>>> clear-button
      $('miles_driven').value = "";
      $('gallons_used').value = "";
      $('price_gallon').value = "";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> clear-button
      //if statements below check for error messages and clears them
      if($('miles_driven_error').value !== '')
      {
@@ -121,8 +145,11 @@
          $('cost').firstChild.nodeValue = ""
      }
 
+<<<<<<< HEAD
 =======
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+>>>>>>> clear-button
  };
 
  window.onload = function() {
@@ -130,6 +157,7 @@
      $('btnClear').onclick = clearForm;
  };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -203,5 +231,8 @@
     //         functions for the Calculate and Clear buttons
     //**********************************************************
 >>>>>>> eff066280ee530c67a586958729ccc982d590e47
+=======
+
+>>>>>>> clear-button
 
 
